@@ -3,13 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: lightyellow;//DA CANCELLARE
 }
 
 body {
     height: 100vh;
     width: 100vw;
     padding: 30px;
+    background-color: lightyellow;//DA CANCELLARE
 
 }
 
@@ -46,6 +46,7 @@ body {
 .icona {
     font-size: 25px;
     margin-left: 10px;
+    color: darkgray;
 }
 
 /* BLOCCO SINISTRO */
@@ -54,10 +55,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: lightgray;
-    color: darkgray;
 }
 
 .avatar {
@@ -79,8 +79,29 @@ body {
 }
 
 .ricerca {
+    position: relative;
     height: 50px;
     background-color: lightgray;
+    padding: 5px 10px;
+}
+
+.ricerca input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.ricerca i {
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+
+    color: darkgray;
 }
 
 .area-mess {
