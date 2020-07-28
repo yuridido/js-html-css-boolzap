@@ -68,6 +68,11 @@ body {
     background-color: tomato;//DA CANCELLARE
 }
 
+.avatar img {
+    width: 100%;
+    object-fit: cover;
+}
+
 .status {
     height: 80px;
     background-color: black;
@@ -95,7 +100,7 @@ body {
 
 .text-box {
     height: calc(100% - 160px);
-    background-image: url('https://lh3.googleusercontent.com/proxy/ph6zYx_2afM3ADqzMcxTPEphOtase3JzoBElwGWUJfLOMFs4lU_JEDIb1ouGkJB24mLyz5rIamUWSRm1pEKZrHt3Q539tgvqYgB3BgF5PmDCZZ0H7T6IZVEwy5jqsPxxP1JxXlkA4-ya80o');
+    background-image: url('https://i.pinimg.com/originals/18/a0/e0/18a0e0909ca4c68fbbfe4b8c746102eb.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
