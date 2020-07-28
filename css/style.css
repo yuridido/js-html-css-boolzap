@@ -45,7 +45,7 @@ body {
 
 .icona {
     font-size: 25px;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 /* BLOCCO SINISTRO */
@@ -54,6 +54,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: lightgray;
     color: darkgray;
 }
@@ -89,4 +91,16 @@ body {
 
 
 
-/* BLOCCO SINISTRO */
+/* BLOCCO DESTRO */
+
+.text-box {
+    height: calc(100% - 160px);
+    background-image: url('https://lh3.googleusercontent.com/proxy/ph6zYx_2afM3ADqzMcxTPEphOtase3JzoBElwGWUJfLOMFs4lU_JEDIb1ouGkJB24mLyz5rIamUWSRm1pEKZrHt3Q539tgvqYgB3BgF5PmDCZZ0H7T6IZVEwy5jqsPxxP1JxXlkA4-ya80o');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.barra-mess {
+    height: 80px;
+    background-color: tomato;//DA CANCELLARE
+}
