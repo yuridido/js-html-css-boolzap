@@ -22,6 +22,13 @@ body {
 .float-left {
     float: left;
 }
+.float-right {
+    float: right;
+}
+
+h2 {
+    color: black;
+}
 
 .container {
     width: 85%;
@@ -34,13 +41,11 @@ body {
 .blocco-sx {
     width: 40%;
     height: 800px;
-    background-color: lime;//DA CANCELLARE
 }
 
 .blocco-dx {
     width: 60%;
     height: 800px;
-    background-color: lightgreen;//DA CANCELLARE
 }
 
 .icona {
@@ -82,7 +87,7 @@ body {
     position: relative;
     height: 50px;
     background-color: lightgray;
-    padding: 5px 10px;
+    padding: 7px 10px;
 }
 
 .ricerca input {
@@ -106,16 +111,29 @@ body {
 
 .area-mess {
     height: calc(100% - 210px);
+    background-color: ;
     overflow-y: scroll;
 }
 
 .blocco-mess {
+    color: darkgray;
+    display: flex;
+    align-items: center;
     height: 80px;
     background-color: white;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 10px;
 }
 
+.testo-utente {
+    margin-left: 15px;
+}
 
+.orario {
+    font-size: 12px;
+    justify-content: flex-end;
+
+}
 
 /* BLOCCO DESTRO */
 
