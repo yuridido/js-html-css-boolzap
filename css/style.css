@@ -35,7 +35,7 @@ h3 {
     min-height: 800px;
     min-width: 1100px;
     margin: 0 auto;
-    background-color: lightgray;
+    background-color: #EAEAEA;
 }
 
 .blocco-sx {
@@ -50,7 +50,7 @@ h3 {
 
 .icona {
     font-size: 25px;
-    color: darkgray;
+    color: #AEAEAE;
 }
 
 /* BLOCCO SINISTRO */
@@ -61,7 +61,7 @@ h3 {
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: lightgray;
+    background-color: #EAEAEA;
 }
 
 .testatina i {
@@ -82,14 +82,34 @@ h3 {
 }
 
 .status {
+    display: flex;
+    align-items: center;
     height: 80px;
-    background-color: black;
+    background-color: #8EDAFC;
+    padding: 7px 10px;
+}
+
+.cont-icona {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.status i {
+    color: #8EDAFC;
+}
+
+.status a {
+    color: #AEAEAE;
 }
 
 .ricerca {
     position: relative;
     height: 50px;
-    background-color: lightgray;
+    background-color: #EAEAEA;
     padding: 7px 10px;
 }
 
@@ -109,7 +129,7 @@ h3 {
     left: 20px;
     transform: translateY(-50%);
 
-    color: darkgray;
+    color: #AEAEAE;
 }
 
 .area-mess {
@@ -119,7 +139,7 @@ h3 {
 }
 
 .blocco-mess {
-    color: darkgray;
+    color: #AEAEAE;
     display: flex;
     align-items: center;
     height: 80px;
@@ -142,6 +162,7 @@ h3 {
 /* BLOCCO DESTRO */
 
 .text-box {
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     height: calc(100% - 160px);
@@ -165,7 +186,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    background-color: lightgray;
+    background-color: #EAEAEA;
     padding: 10px 30px;
 }
 
@@ -199,7 +220,7 @@ h3 {
 }
 
 .ora-mess {
-    color: darkgray;
+    color: #AEAEAE;
     text-align: right;
 
 }
