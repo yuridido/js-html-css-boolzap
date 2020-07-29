@@ -3,7 +3,7 @@ $(document).ready(function() {
         "ok",
         "ciao",
         "saluti",
-        "ue"
+        "devo andare, ciao"
     ];
 
 
@@ -43,15 +43,17 @@ $(document).ready(function() {
     // FUNZIONI
     // funzione per creare il mio messaggio
     function invio() {
-        var testo = $('#mess-text').val();
-        var contenitore = $('.template .messaggio').clone().addClass('mandato');
-        var d = new Date();
-        var ora = d.getHours();
-        var minuti = d.getMinutes();
-        $(contenitore).children('p').append(testo);
-        $(contenitore).children('.ora-mess').append(ora + ':' + minuti);
-        $('.text-box').append(contenitore);
-        setTimeout(risposta, 2000);
+        if ($('#mess-text').val() != "") {
+            var testo = $('#mess-text').val();
+            var contenitore = $('.template .messaggio').clone().addClass('mandato');
+            var d = new Date();
+            var ora = d.getHours();
+            var minuti = d.getMinutes();
+            $(contenitore).children('p').append(testo);
+            $(contenitore).children('.ora-mess').append(ora + ':' + minuti);
+            $('.text-box').append(contenitore);
+            setTimeout(risposta, 2000);
+        }
     }
     //funzione per risposta automatica
     function risposta() {
@@ -63,10 +65,16 @@ $(document).ready(function() {
         $(contenitore).children('p').append(risp[random(0, 3)]);
         $(contenitore).children('.ora-mess').append(ora + ':' + minuti);
         $('.text-box').append(contenitore);
+        scroll();
     }
 
     function random(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function scroll(){
+        var ancor = $('.text-box .messaggio:last-child').position();
+        $('.text-box').scrollTop(ancor.top);
     }
 
 
