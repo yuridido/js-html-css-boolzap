@@ -6,11 +6,6 @@ $(document).ready(function() {
         "devo andare, ciao"
     ];
 
-
-
-
-
-
     // FACCIO PARTIRE IL MESSAGGIO CON IL TASTO INVIO
     $('#mess-text').keydown(function(event) {
         if (event.which == 13) {
@@ -23,13 +18,6 @@ $(document).ready(function() {
         invio();
         $('#mess-text').val('');
     });
-
-
-
-
-
-
-
 
 
 
@@ -67,11 +55,11 @@ $(document).ready(function() {
         $('.text-box').append(contenitore);
         scroll();
     }
-
+    // funzione per numero random
     function random(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-
+    // tentativo funzione scroll
     function scroll(){
         var ancor = $('.text-box .messaggio:last-child').position();
         $('.text-box').scrollTop(ancor.bottom);
