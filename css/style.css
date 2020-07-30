@@ -210,6 +210,10 @@ h3 {
 
 
 /* STILE TEMPLATE E MESSAGGI */
+.template {
+    display: none;
+}
+
 
 .messaggio {
     min-height: 70px;

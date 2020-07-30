@@ -74,7 +74,7 @@ $(document).ready(function() {
 
     function scroll(){
         var ancor = $('.text-box .messaggio:last-child').position();
-        $('.text-box').scrollTop(ancor.top);
+        $('.text-box').scrollTop(ancor.bottom);
     }
 
 
