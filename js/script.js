@@ -18,6 +18,8 @@ $(document).ready(function() {
         invio();
         $('#mess-text').val('');
     });
+    // al click sull'utente sposto l'area attiva
+    $('.area-mess .blocco-mess').click(seleziona);
 
 
 
@@ -39,7 +41,7 @@ $(document).ready(function() {
             var minuti = d.getMinutes();
             $(contenitore).children('p').append(testo);
             $(contenitore).children('.ora-mess').append(ora + ':' + minuti);
-            $('.text-box').append(contenitore);
+            $('.text-box.active').append(contenitore);
             setTimeout(risposta, 2000);
         }
     }
@@ -52,7 +54,7 @@ $(document).ready(function() {
         var minuti = d.getMinutes();
         $(contenitore).children('p').append(risp[random(0, 3)]);
         $(contenitore).children('.ora-mess').append(ora + ':' + minuti);
-        $('.text-box').append(contenitore);
+        $('.text-box.active').append(contenitore);
         scroll();
     }
     // funzione per numero random
@@ -60,9 +62,17 @@ $(document).ready(function() {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     // tentativo funzione scroll
-    function scroll(){
-        var ancor = $('.text-box .messaggio:last-child').position();
-        $('.text-box').scrollTop(ancor.bottom);
+    function scroll() {
+        var ancor = $('.text-box.active .messaggio:last-child').position();
+        $('.text-box.active').scrollTop(ancor.bottom);
+    }
+
+    function seleziona() {
+        $('.area-mess .blocco-mess').removeClass('active');
+        $(this).addClass('active');
+        $('.chat .text-box').removeClass('active');
+        var i = $(this).index();
+        $('.chat .text-box').eq(i).addClass('active');
     }
 
 

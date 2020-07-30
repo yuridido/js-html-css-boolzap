@@ -170,15 +170,22 @@ h3 {
 
 /* BLOCCO DESTRO */
 
+.chat {
+    height: calc(100% - 160px)
+}
+
 .text-box {
-    /* position: relative; */
-    display: flex;
+    display: none;
     flex-direction: column;
-    height: calc(100% - 160px);
+    height: 100%;
     background-image: url('https://i.pinimg.com/originals/18/a0/e0/18a0e0909ca4c68fbbfe4b8c746102eb.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     overflow-y: scroll;
+}
+
+.text-box.active {
+    display: flex;
 }
 
 .testata-dx .test-sx {
