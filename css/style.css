@@ -233,10 +233,15 @@ h3 {
 
 .messaggio {
     min-height: 70px;
-    width: 200px;
+    min-width: 200px;
     border-radius: 20px;
     margin: 15px;
     padding: 15px;
+}
+
+.messaggio .testo-mess {
+    max-width: 400px;
+    height: auto;
 }
 
 .ora-mess {

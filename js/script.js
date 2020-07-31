@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     // FACCIO PARTIRE IL MESSAGGIO CON IL TASTO INVIO
     $('#mess-text').keydown(function(event) {
-        if (event.which == 13) {
+        if (event.which == 13 || event.keyCode == 13) {
             invio();
             $('#mess-text').val('');
         }
@@ -36,11 +36,11 @@ $(document).ready(function() {
         if ($('#mess-text').val() != "") {
             var testo = $('#mess-text').val();
             var contenitore = $('.template .messaggio').clone().addClass('mandato');
-            var d = new Date();
-            var ora = d.getHours();
-            var minuti = d.getMinutes();
+            // var d = new Date();
+            // var ora = d.getHours();
+            // var minuti = d.getMinutes();
             $(contenitore).children('p').append(testo);
-            $(contenitore).children('.ora-mess').append(ora + ':' + minuti);
+            $(contenitore).children('.ora-mess').append(dataOrario());
             $('.text-box.active').append(contenitore);
             setTimeout(risposta, 2000);
         }
@@ -49,11 +49,11 @@ $(document).ready(function() {
     function risposta() {
 
         var contenitore = $('.template .messaggio').clone().addClass('ricevuto');
-        var d = new Date();
-        var ora = d.getHours();
-        var minuti = d.getMinutes();
+        // var d = new Date();
+        // var ora = d.getHours();
+        // var minuti = d.getMinutes();
         $(contenitore).children('p').append(risp[random(0, 3)]);
-        $(contenitore).children('.ora-mess').append(ora + ':' + minuti);
+        $(contenitore).children('.ora-mess').append(dataOrario());
         $('.text-box.active').append(contenitore);
         scroll();
     }
@@ -73,6 +73,20 @@ $(document).ready(function() {
         $('.chat .text-box').removeClass('active');
         var i = $(this).index();
         $('.chat .text-box').eq(i).addClass('active');
+    }
+
+    function dataOrario() {
+        var d = new Date();
+        var ora = d.getHours();
+        var minuti = d.getMinutes();
+        return addZero(ora) + ':' + minuti
+    }
+
+    function addZero(numero) {
+        if (numero < 10) {
+            return '0' + numero
+        } else { return numero
+        }
     }
 
 
