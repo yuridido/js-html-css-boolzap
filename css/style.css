@@ -240,8 +240,8 @@ h3 {
 }
 
 .messaggio .testo-mess {
-    max-width: 400px;
-    height: auto;
+    max-width: 200px;
+    word-wrap: break-word;
 }
 
 .ora-mess {

@@ -18,8 +18,14 @@ $(document).ready(function() {
         invio();
         $('#mess-text').val('');
     });
-    // al click sull'utente sposto l'area attiva
+    // al click sull'utente sposto l'area attiva e l'intestazione della chat
     $('.area-mess .blocco-mess').click(seleziona);
+    $('.area-mess .blocco-mess').click(intestazione);
+
+
+
+
+
 
 
 
@@ -36,9 +42,6 @@ $(document).ready(function() {
         if ($('#mess-text').val() != "") {
             var testo = $('#mess-text').val();
             var contenitore = $('.template .messaggio').clone().addClass('mandato');
-            // var d = new Date();
-            // var ora = d.getHours();
-            // var minuti = d.getMinutes();
             $(contenitore).children('p').append(testo);
             $(contenitore).children('.ora-mess').append(dataOrario());
             $('.text-box.active').append(contenitore);
@@ -49,9 +52,6 @@ $(document).ready(function() {
     function risposta() {
 
         var contenitore = $('.template .messaggio').clone().addClass('ricevuto');
-        // var d = new Date();
-        // var ora = d.getHours();
-        // var minuti = d.getMinutes();
         $(contenitore).children('p').append(risp[random(0, 3)]);
         $(contenitore).children('.ora-mess').append(dataOrario());
         $('.text-box.active').append(contenitore);
@@ -60,11 +60,6 @@ $(document).ready(function() {
     // funzione per numero random
     function random(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-    // tentativo funzione scroll
-    function scroll() {
-        var ancor = $('.text-box.active .messaggio:last-child').position();
-        $('.text-box.active').scrollTop(ancor.bottom);
     }
 
     function seleziona() {
@@ -75,21 +70,32 @@ $(document).ready(function() {
         $('.chat .text-box').eq(i).addClass('active');
     }
 
+    function intestazione() {
+        var nome = $(this).find('h3').text();
+        var foto = $(this).find('img').attr('src')
+        $('.header .h-nome').text(nome);
+        $('.header img').attr('src', foto);
+    }
+
+
     function dataOrario() {
         var d = new Date();
         var ora = d.getHours();
         var minuti = d.getMinutes();
-        return addZero(ora) + ':' + minuti
+        return addZero(ora) + ':' + addZero(minuti);
     }
 
     function addZero(numero) {
         if (numero < 10) {
-            return '0' + numero
-        } else { return numero
+            return '0' + numero;
+        } else { return numero;
         }
     }
 
-
-
+    // // tentativo funzione scroll
+    // function scroll() {
+        //     var ancor = $('.text-box.active .messaggio:last-child').position();
+        //     $('.text-box.active').scrollTop(ancor.bottom);
+        // }
 
 });
