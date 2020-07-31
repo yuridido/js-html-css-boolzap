@@ -73,7 +73,7 @@ $(document).ready(function() {
         $(contenitore).children('p').append(risp[random(0, 3)]);
         $(contenitore).children('.ora-mess').append(dataOrario());
         $('.text-box.active').append(contenitore);
-        scroll();
+        // scroll();
     }
     // funzione per numero random
     function random(min, max) {
@@ -111,8 +111,8 @@ $(document).ready(function() {
 
     // // tentativo funzione scroll
     // function scroll() {
-        //     var ancor = $('.text-box.active .messaggio:last-child').position();
-        //     $('.text-box.active').scrollTop(ancor.bottom);
-        // }
+    //         var ancor = $('.text-box.active .messaggio:last-child').position();
+    //         $('.text-box.active').scrollTop(ancor.bottom);
+    //     }
 
 });
