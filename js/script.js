@@ -22,6 +22,24 @@ $(document).ready(function() {
     $('.area-mess .blocco-mess').click(seleziona);
     $('.area-mess .blocco-mess').click(intestazione);
 
+    // ricerca dell'utente
+    var utente = "";
+    $('#ric-utente').keyup(function() {
+        var testoRicerca = $('#ric-utente').val();
+        if (testoRicerca == "") {
+            $('.blocco-mess').show();
+        } else {
+            $('.blocco-mess').hide();
+            $('.blocco-mess').each(function() {
+                utente = $(this).find('h3').text().toLowerCase();
+                if (utente.includes(testoRicerca)) {
+                    $(this).show();
+                }
+            });
+        }
+    });
+
+
 
 
 
@@ -76,7 +94,6 @@ $(document).ready(function() {
         $('.header .h-nome').text(nome);
         $('.header img').attr('src', foto);
     }
-
 
     function dataOrario() {
         var d = new Date();
