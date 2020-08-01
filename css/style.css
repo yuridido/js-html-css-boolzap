@@ -9,7 +9,8 @@ body {
     height: 100vh;
     width: 100vw;
     padding: 30px;
-    background-color: lightyellow;
+    background-color: #dddbd1;
+    background-image: linear-gradient(180deg,#dddbd1,#d2dbdc);
 
 }
 
@@ -177,9 +178,10 @@ h3 {
     display: none;
     flex-direction: column;
     height: 100%;
-    background-image: url('https://i.pinimg.com/originals/18/a0/e0/18a0e0909ca4c68fbbfe4b8c746102eb.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: antiquewhite;
+    background-image: url('https://web.whatsapp.com/img/bg-chat-tile-light_9e8a2898faedb7db9bf5638405cf81ae.png');
+    background-size: contain;
+    background-repeat: repeat;
     overflow-y: scroll;
 }
 
