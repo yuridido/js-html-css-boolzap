@@ -9,8 +9,8 @@ body {
     height: 100vh;
     width: 100vw;
     padding: 30px;
-    background-color: #dddbd1;
-    background-image: linear-gradient(180deg,#dddbd1,#d2dbdc);
+    background: rgb(54,64,74);
+    background: linear-gradient(180deg, rgba(54,64,74,1) 0%, rgba(112,128,144,1) 100%);
 
 }
 
@@ -37,6 +37,8 @@ h3 {
     min-width: 1100px;
     margin: 0 auto;
     background-color: #EAEAEA;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
 }
 
 .blocco-sx {
@@ -47,11 +49,16 @@ h3 {
 .blocco-dx {
     width: 60%;
     height: 800px;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .icona {
     font-size: 25px;
-    color: #AEAEAE;
+    color: slategray;
+}
+
+.icona:hover {
+    color: lightsteelblue;
 }
 
 /* BLOCCO SINISTRO */
@@ -62,7 +69,7 @@ h3 {
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #EAEAEA;
+    background-color: AliceBlue;
 }
 
 .testatina i {
@@ -129,7 +136,7 @@ h3 {
     left: 20px;
     transform: translateY(-50%);
 
-    color: #AEAEAE;
+    color: slategray;
 }
 /* parte con gli utenti */
 .area-mess {
@@ -139,7 +146,7 @@ h3 {
 }
 
 .blocco-mess {
-    color: #AEAEAE;
+    color: slategray;
     display: flex;
     align-items: center;
     height: 80px;
@@ -154,7 +161,12 @@ h3 {
 }
 
 .blocco-mess.active {
-    background-color: rgba(233, 245, 94, 0.4)
+    background-color: slategray;
+    color: white;
+}
+
+.blocco-mess.active h3 {
+    color: white;
 }
 
 .testo-utente {
@@ -170,6 +182,9 @@ h3 {
 
 /* BLOCCO DESTRO */
 
+
+
+
 .chat {
     height: calc(100% - 160px)
 }
@@ -178,11 +193,10 @@ h3 {
     display: none;
     flex-direction: column;
     height: 100%;
-    background-color: antiquewhite;
-    background-image: url('https://web.whatsapp.com/img/bg-chat-tile-light_9e8a2898faedb7db9bf5638405cf81ae.png');
+    background: slategray;
+    background-image: url('../img/sfondo.png');
     background-size: contain;
-    background-repeat: repeat;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .text-box.active {
@@ -203,7 +217,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    background-color: #EAEAEA;
+    background-color: AliceBlue;
     padding: 10px 30px;
 }
 
@@ -246,14 +260,14 @@ h3 {
 }
 
 .ora-mess {
-    color: #AEAEAE;
+    color: slategray;
     text-align: right;
 
 }
 
 .mandato {
     align-self: flex-end;
-    background-color: lightgreen;
+    background-color: MediumAquaMarine;
 }
 
 .ricevuto {

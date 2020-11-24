@@ -25,7 +25,7 @@ $(document).ready(function() {
     // ricerca dell'utente
     var utente = "";
     $('#ric-utente').keyup(function() {
-        var testoRicerca = $('#ric-utente').val();
+        var testoRicerca = $('#ric-utente').val().toLowerCase();
         if (testoRicerca == "") {
             $('.blocco-mess').show();
         } else {
@@ -38,19 +38,6 @@ $(document).ready(function() {
             });
         }
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
